@@ -26,4 +26,4 @@ $config['site_title'] = "v21k";
 $config['pages_order_by'] = 'date';	// Order pages by "alpha" or "date"
 $config['pages_order'] = 'desc';// Order pages "asc" or "desc"
 $config['theme'] = 'pure'; 			// Set the theme (defaults to "default")
-$config['base_url'] = 'http://www.8fold.in/'; 				// Override base URL (e.g. http://example.com)
+$config['base_url'] = 'http://www.8fold.in'; 				// Override base URL (e.g. http://example.com)
