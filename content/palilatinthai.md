@@ -1,5 +1,6 @@
 /*
 Title: Pāli/Latin/Thai
+Date: 2014/06/20
 */
 
 Latin alphabet and Thai script for Pāli 
