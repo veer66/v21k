@@ -15,7 +15,7 @@
 {% endif %}
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="{{ theme_url }}/favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+        <link rel="stylesheet" href="{{ theme_url }}/styles/pure-min.css">
         <link rel="stylesheet" href="{{ theme_url }}/styles/main.css">
         <link rel="stylesheet" href="{{ theme_url }}/styles/navigataur.css">
         <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -37,10 +37,13 @@
                     </ul>
                 </div>
             </div>
+	    <div class="pure-u-1" id="pagenav">
+	      {{ pagination_links }}
+	    </div>
             <div class="pure-u-1">
-                <div id="content">
+              <div id="content">
 {% if is_front_page %}
-{% for page in pages %}
+{% for page in paged_pages %}
 {% if page.date and not(page.url == base_url~'/') %}
 		    <div class="post">
 		        <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
@@ -58,39 +61,12 @@
 		        <p class="meta">Published {{ meta.date_formatted }}</p>
 {% endif %}
 		        {% spaceless %}{{ content }}{% endspaceless %}
-				
+
 		    </div>
 {% endif %}
                 </div>
-                <!-- AddThis Button BEGIN -->
-                <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-                <a class="addthis_button_preferred_1"></a>
-                <a class="addthis_button_preferred_2"></a>
-                <a class="addthis_button_preferred_3"></a>
-                <a class="addthis_button_preferred_4"></a>
-                <a class="addthis_button_compact"></a>
-                <a class="addthis_counter addthis_bubble_style"></a>
-                </div>
-                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-538d63a459df4bb1"></script>
-                <!-- AddThis Button END -->
 
-            {% if not(is_front_page) %}
-                 
-                <div id="disqus_thread"></div>
-                <script type="text/javascript">
-                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                        var disqus_shortname = '8foldwww'; // required: replace example with your forum shortname
-
-                        /* * * DON'T EDIT BELOW THIS LINE * * */
-                        (function() {
-                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                        })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            {% if not(is_front_page) %}                 
             {% endif %}
             </div>
         </div>
