@@ -1,5 +1,5 @@
 /*
-Title: Installing Gaia from Github to Mozilla Flame device
+Title: Installing mofidied Gaia to Mozilla Flame device
 Date: 2015/11/2
 */
 
