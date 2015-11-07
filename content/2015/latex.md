@@ -7,6 +7,8 @@ I installed these packages every time I install Fedora (GNU/Linux). And every ti
 
 The packages that I need are as follow:
 
+* texlive
+* texlive-xetex
 * texlive-algorithmicx
 * texlive-linguex
 * texlive-fontspec (as far as I remember, it has been installed by default.)
@@ -15,5 +17,4 @@ The packages that I need are as follow:
 * texlive-colortbl
 * texlive-polyglossia
 * texlive-fonts-tlwg
-* texlive-txfonts
 * texlive-euenc
